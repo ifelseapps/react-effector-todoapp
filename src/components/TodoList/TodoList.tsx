@@ -1,16 +1,15 @@
-import React, { JSX } from "react";
-import { TodoItem } from "../../types";
+import { useUnit } from 'effector-react'
+import React, { JSX } from 'react'
+import { $tasks } from '../../model'
 
-type TodoListProps = {
-  todo: TodoItem[];
-};
+export function TodoList(): JSX.Element {
+  const tasks = useUnit($tasks)
 
-export function TodoList({ todo }: TodoListProps): JSX.Element {
   return (
     <ul>
-      {todo.map(item => (
-        <li key={item.title}>{item.title}</li>
+      {tasks.map((item) => (
+        <li key={item.id}>{item.title}</li>
       ))}
     </ul>
-  );
+  )
 }

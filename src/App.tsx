@@ -1,8 +1,7 @@
-import React from 'react';
-import './App.css';
-import { TodoList } from './components/TodoList/TodoList';
-import { TODO_MOCK_DATA } from './__mock__/todo';
-import { AddForm } from './components/AddForm/AddForm';
+import React from 'react'
+import './App.css'
+import { TodoList } from './components/TodoList/TodoList'
+import { AddForm } from './components/AddForm/AddForm'
 
 function App() {
   return (
@@ -10,9 +9,9 @@ function App() {
       <h1>Список задач</h1>
       <hr />
       <AddForm />
-      <TodoList todo={TODO_MOCK_DATA} />
+      <TodoList />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
